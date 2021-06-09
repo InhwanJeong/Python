@@ -22,14 +22,12 @@ if (a := fruit.get('lemon')) > 1:
 elif (a := fruit.get('apple')) > 4:
     print('get apple icecream')
 elif (a := fruit.get('orange')) > 3:
-    print('get orange cand')
+    print('get orange candy')
 else:
     print('out of stock')
 
 
 # while walrus
-item = 'apple'
-
-while (itemCount := fruit.get(item)) > 0:
+while (itemCount := fruit.get(item:='apple')) > 0:
     print(itemCount)
     fruit[item] = itemCount -1
